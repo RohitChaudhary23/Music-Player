@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	text-align: center;
+	overflow: hidden;
+}
+
+#musicBox {
+	height: 91vh;
+	width: 22rem;
+	background-color: white;
+	margin: 10px auto;
+	position: relative;
+	border-radius: 10px;
+	border: 1px solid gray;
+	box-shadow: 0px 5px 8px 2px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+	max-height: 3.75rem;
+	padding: 18px 0px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	word-spacing: 5px;
+	text-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
+	margin-bottom: 0.5rem;
+}
+
+h6 {
+	font-size: 1.2rem;
+	margin: 0;
+	color: grey;
+	text-transform: capitalize;
+	letter-spacing: 1.5px;
+	word-spacing: 2.5px;
+}
+
+.imgBox {
+	width: 100%;
+	height: 22rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	margin: 0;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.musicBarBox{
+	margin: 0px auto;
+	width: 90%;
+	height: 5vh;
+}
+
+.musicTime {
+	display: flex;
+	justify-content: space-between;
+}
+
+.musicProgress {
+	margin-top: 5px;
+	width: 100%;
+	height: 3px;
+	background-color: rgb(0, 0, 0, .3);
+	position: relative;
+	cursor: pointer;
+}
+
+.musicBar {
+	position: absolute;
+	width: 0%;
+	height: 3px;
+	background-color: black;
+	transition: width 1s;
+}
+
+.musicBar::after{
+	content: '';
+	position: absolute;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background-color: black;
+	left: 97%;
+	top: -3px;
+}
+
+.buttons {
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.buttons span i{
+	cursor: pointer;
+}
+
+.buttons span i:hover{
+	color: grey;
+}
+
+.animation {
+	animation: rotateImage 4s infinite;
+}
+
+@keyframes rotateImage {
+	from{
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
